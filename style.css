@@ -47,7 +47,7 @@ body::before {
 }
 
 .page { 
-  width: 38rem ;
+  width: clamp(10rem, 30rem + 15vw, 70rem);
   margin: 0 auto;
 }
 
@@ -217,7 +217,8 @@ footer .button:hover {
   .test {
     width: 100%;
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr;
+    
+    grid-template-columns: 68% 20% 20%;
     gap: 3.2rem;                                                                                 
   }
 }
