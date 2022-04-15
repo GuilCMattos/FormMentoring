@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* Fonts */
+  --ff-titles: 'Staatliches', cursive;
+  --ff-body: 'Poppins', sans-serif;
+
+  /* Font-size */
+  --fs-body: 1.6rem;
+
+
+  /* Colors */
+  --fc-title-bg: #535971;
+  --fc-body:#4E4958;
+  --fc-span: #C1BCCC;;
+  --btn-color: #FF5374;
+  --bg-color: #E5E5E5;
+  --bg-form-color: #fff;
+  --bg-forms-color: #FAFAFC;
+
+}
+
+
+body { 
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  background-color: var(--bg-color);
+
+}
+
+body::before { 
+  content: '';
+  width: 100%;
+  height: 33.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--fc-title-bg);
+}
+
+.page { 
+  width: 38rem ;
+  margin: 0 auto;
+}
+
+header { 
+  padding: 10rem 0 3.8rem;
+  animation: toleftRight 1s;
+}
+
+header h1 { 
+  font-family: var(--ff-titles);
+  font-size: 4.8rem;
+  line-height: 6rem;
+  color: var(--bg-form-color);
+}
+
+header p { 
+  margin-top: 1.8rem;
+  line-height: 3rem;
+  color: var(--bg-form-color);
+
+}
+
+form { 
+  background-color: var(--bg-form-color);
+  min-height: 30rem;
+  padding: 4rem 4rem ;
+  border-radius: .8rem .8rem 0 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  animation: torightLeft 1s;
+
+}
+
+fieldset { 
+  border: none;
+  width: 100%;
+}
+
+.fieldset-wrapper { 
+  display: grid;
+  gap: 2rem;
+}
+
+.col-2 { 
+  display: grid;
+  gap: 2rem;
+}
+
+fieldset legend { 
+  margin-top: 3rem;
+  font-family: var(--ff-titles);
+  font-size: 2.4rem;
+  color: var(--fc-title-bg);
+  width: 100%;
+  border-bottom: 1px solid var(--bg-color);
+  padding-bottom: 1.2rem;
+}
+
+.input-wrapper { 
+  
+  display: flex;
+  flex-direction: column ;
+}
+
+.input-wrapper label {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: var(--fc-body);
+  margin-bottom: .4rem ;
+}
+
+.input-wrapper label span { 
+  font-size: 1.2rem;
+  color: var(--fc-span);
+  margin-left: .6rem;
+}
+
+.input-wrapper label span:hover { 
+  color:#99969e ;
+}
+
+.input-wrapper input { 
+  border: 1px solid var(--bg-color);
+  border-radius: .5rem;
+  background-color: var(--bg-forms-color);
+  height: 4rem;
+  padding: 0 1rem;
+
+  /* font */
+  font-family: var(--ff-body);
+  color: var(--fc-body);
+  font-size: 1.4rem;
+  
+
+}
+
+.input-wrapper h2 { 
+  font-family: var(--ff-titles);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--fc-title-bg);
+  
+  margin: 2rem 0 .4rem;
+}
+
+.test { 
+  display: grid;
+}
+
+.hour { 
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+footer { 
+  animation: torightLeft 1s;
+  background-color:var(--fc-body) ;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 6rem ;
+  margin-bottom: 10rem;
+  border-radius:  0 0 .8rem .8rem;
+}
+
+footer .button { 
+  height: 5rem;
+  background-color: var(--btn-color);
+  border-radius: 4rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: var(--ff-titles);
+  font-weight: 400;
+  color: var(--bg-form-color);
+  border: none;
+  transition: 200ms;
+}
+
+footer .button:hover { 
+  background-color: #e44061;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media (min-width:782px) { 
+  .page { 
+    width: 75rem ;
+    margin: 0 auto;
+  }
+
+  .col-2 { 
+    grid-template-columns: 1fr 1fr ;
+  }
+
+  .hour { 
+    display: flex;
+    grid-template-columns: 0;
+    margin-top: -.5px ;
+  }
+
+  .test {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    gap: 3.2rem;                                                                                 
+  }
+}
+
+@keyframes toleftRight { 
+  0% { 
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+
+  100% { 
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+
+@keyframes torightLeft { 
+  0% { 
+    transform: translateX(15px);
+    opacity: 0;
+  }
+
+  100% { 
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
